@@ -1,2 +1,5 @@
 # Python-Labs
-IOT - python labs
+
+Third Lab
+
+Print all lines from the file that contain errors (starting with the phrase WFLYCTL and containing the words ERROR)
