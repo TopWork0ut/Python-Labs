@@ -1,15 +1,11 @@
-from classes.publications import PrintedBook, AudioBook, Magazine
+import re
 
 
 def main():
-    printed_book = PrintedBook("PrintedBookCaption", False, "Fantasy", 200, "Coated Paper")
-    print(printed_book)
-
-    audio_book = AudioBook("AudioBookCaption", False, "Fantasy", 3, 2.5)
-    print(audio_book)
-
-    magazine = Magazine("MagazineCaption", "Documental", "Ukraine History")
-    print(magazine)
+    with open("server.log.2018-04-04", "r") as file:
+        for line in file:
+            if re.compile(r"WFLYCTL\d{4}").search(line) is not None:
+                print(line)
 
 
 if __name__ == '__main__':
